@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />      
+    
+    <link href="style.css" rel="stylesheet">
+    <title>Le Jardin Buissonnier : Le Blog</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+      
+<header>
+    <div id="entete">
+        <img src="images/entete.svg" alt="Le jardin buissonnier" id="entete_image"/>
+    </div>
+</header>
+
+<div id="conteneur">
+<div id="menu">
+<nav class="menu_nav">
+
+    <a href="index.html" ><div class="element_menu"> <img src="images/accueil.svg" alt="icone accueil" class="icone_menu" />  Accueil</div></a>
+    <a href="jardins.html" ><div class="element_menu"> <img src="images/auxjardins.svg" alt="icone accueil" class="icone_menu"/> Aux Jardins</div></a>
+    <a href="#" ><div class="element_menu"> <img src="images/blog.svg" alt="icone accueil" class="icone_menu" /> Blog</div></a>
+    <a href="contact.html" ><div class="element_menu"> <img src="images/contact.svg" alt="icone accueil" class="icone_menu" /> Contact</div></a>
+
+</nav>
+</div>
+    
+    <!-- Structure de la page -->
+    
+    <div id="Global">
+    <img src="images/fleche_bas.svg" style="position: absolute; top: 110px; left: 140px;" />
+    <p class="KG" style="margin-left: 175px;"> Les cultures sont organisées en six jardins différents. <br />
+    Et elles tournent tous les ans pour laisser la terre respirer.</p>
+
+ <div style="padding-left:170px; padding-right:150px;display:flex;flex-wrap: wrap;">    
+
+    
+    
+    <div class="categorie_jardin"> 
+        <img src="images/cruciferes.png" alt="cruciferes" style="width:218px; height: auto;"/>
+    </div>
+    <div class="categorie_jardin"> 
+        <img src="images/primeurs.png" alt="primeurs" style="width:218px; height: auto;"/>
+    </div>
+    <div class="categorie_jardin"> 
+        <img src="images/liliaces.png" alt="liliaces" style="width:218px; height: auto;"/>
+    </div>
+    <div class="categorie_jardin"> 
+        <img src="images/cruciferes.png" alt="cruciferes" style="width:218px; height: auto;"/>
+    </div>
+    <div class="categorie_jardin"> 
+        <img src="images/cruciferes.png" alt="cruciferes" style="width:218px; height: auto;"/>
+    </div>
+    <div class="categorie_jardin"> 
+        <img src="images/engrais.png" alt="engrais" style="width:218px; height: auto;"/>
+    </div>
+    <p class="KG" style="text-align: right;"> Il n'y a rien qui pousse pour être mangé dans celui-là. <br />
+    Ce sont uniquement des plantes qui permettent d'enrichir le sol pour la prochaine rotation. </p>
+    <img src="images/fleche_haut.svg" style="position: absolute; bottom: 380px;right: 125px;" />
+
+</div>
+    
+    </div>
+
+    
+    <script type="text/javascript">   
+    console.log('Tut');
+    console.log('page', pageYOffset);
+    window.onscroll = function (e) {
+      
+      var body = document.body,
+        html = document.documentElement;
+
+      var height = Math.max( body.scrollHeight, body.offsetHeight,html.clientHeight, html.scrollHeight, html.offsetHeight );
+      
+      var your_div = document.getElementById('box_menu_lat');
+      
+      console.log('H', height);
+      $('#box_menu_lat').css({
+          'top':  Math.min(Math.max(210 + pageYOffset - 180, 210), height-770)
+      });
+      }
+    </script>
+
+    <div id="box_menu_lat">
+    <div class="menu_lateral">
+    <nav class="menu_lat_nav">
+    
+   
+    <a href="#"> <div class="e_menu_lat"> <img src="images/fleur.svg" class="i_menu_lat"/> Blog </div></a>
+    <a href="contact.html"> <div class="e_menu_lat"> <img src="images/fleur.svg" class="i_menu_lat"/> Nous contacter</div></a>
+    <a href="index.html"> <div class="e_menu_lat" style="color: #dde9af;;"> <img src="images/fleur_verte.svg" class="i_menu_lat"/> Retour à l'accueil</div></a>
+    
+    </nav>
+    </div>
+    <span class="triangle_lat"> <img src="images/triangle.svg" alt="" style="width:50px; height: auto;"/></span>
+    </div>
+
+     
+        
+     <div style="clear: both;"></div>  
+    <footer>
+        <!-- Pied de page -->
+        <span id="pied"> Le Jardin Buissonnier - Lieu dit Le Buisson - Saint-Pardoux-la-rivière - 24470 </span>
+    </footer>
+    <div id="bambou"> <img src="images/bambou.svg" alt="" /> </div>
+</div>
+</body>
+</html>

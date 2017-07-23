@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        
+        <link rel="stylesheet" href="style.css" />
+        <title>Le jardin buissonnier</title>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+
+    <body>
+    
+    
+
+
+    <header>
+        <!-- En-tête-->
+        <div id="entete">
+            <img src="images/entete.svg" alt="Le jardin buissonnier" id="entete_image"/>
+        </div>
+    </header>
+
+    <div id="conteneur">
+    <div id="menu"> <!-- Flexbox -->
+    <nav class="menu_nav">
+    <a href="index.html" ><div class="element_menu"> <img src="images/accueil.svg" alt="icone accueil" class="icone_menu" />  Accueil</div></a>
+    <a href="jardins.html" ><div class="element_menu"> <img src="images/auxjardins.svg" alt="icone accueil" class="icone_menu"/> Aux Jardins</div></a>
+    <a href="#" ><div class="element_menu"> <img src="images/blog.svg" alt="icone accueil" class="icone_menu" /> Blog</div></a>
+    <a href="contact.html" ><div class="element_menu"> <img src="images/contact.svg" alt="icone accueil" class="icone_menu" /> Contact</div></a>
+    </nav>
+        </div>
+        
+        <!-- Structure de la page -->
+        
+        <div id="Global_accueil">
+        
+  <div style="padding-left:150px; padding-right:150px;">
+
+ <div class="div_container">
+ <p class="titre_article"> Qui sommes-nous ?</p>
+</div>
+
+ 
+ <div class="ligne_verte"> &nbsp; </div>
+
+
+    <p class="KG" id="QuiSommesNous"> Le Jardin Buissonnier est l'histoire d'une famille qui a décidé de se remettre au vert et de travailler la terre. Au coeur du Périgord vert, Isabelle et Christophe profitent d'une surface en plein champs pour mettre en place, dans la grande lignée de la Permaculture, des parcelles de maraîchage en Agriculture Biologique. Amateurs de légumes qui ont du goût, leurs choix se tournent vers des variétés anciennes, adaptées à la culture en plein champs, aux saisons et au climat. Antoine et Etienne jouent avec la terre, l'écoutent et la transforment, dans une patience infinie, en pots, tasses, pipes, photophores ou encore cuit-vapeurs. Ses poteries, cuites sur place, se gorgent alors, sous l'action des flammes, de l'esprit du Jardin, des lois de la nature et de ses humeurs inégales. </p>
+    
+<div class="cases">
+ <div class="case_contact"> </div>
+ <div class="case_contact"> </div>
+ <div class="case_contact"> </div>
+ <div class="case_contact"> </div>
+ <div class="case_contact"> </div>
+ <div class="case_contact"> </div>
+ <div class="case_contact"> </div>
+ <div class="case_contact"> </div>
+  <div class="case_contact"> </div>
+ <div class="case_contact"> </div>
+ <div class="case_contact"> </div>
+ <div class="case_contact"> </div>
+</div>
+
+
+ <div class="div_container">
+ <p class="titre_article" id="OuNousTrouver">Où nous trouver ?</p>
+</div>
+
+ <div class="ligne_verte"> &nbsp; </div>
+ 
+ <img src="images/jardin_buissonnier.png" style="width: 100%; height:auto;" /> 
+ 
+ 
+ <ul style="font-family: 'LeagueGothic'; color: #556242; font-size:16pt;" >
+    <li class="cl_1"> Directement au Jardin Buissonnier</li>
+    Vente à la ferme -  Lieu dit le Buisson - 24470 Saint-Pardoux-la-Rivière :
+        <ul>
+            <li class="cl_2"> Tous les soirs : 17h-19h </li>
+            <li class="cl_2"> Sur rendez-vous via le <a href="#FormulaireContact">formulaire de contact</a> </li>
+            <li class="cl_2"> Rejoignez-nous sur <a href="https://www.facebook.com/Le-Jardin-Buissonnier-1734976990112953/" target="_blank" style="color:#3c5a99;">facebook</a>  </li>
+        </ul>
+    <li class="cl_1"> Aux marchés </li>
+    Marché de Saint-Pardoux-la-Rivière
+        <ul>
+            <li class="cl_2"> Jeudi : 9h-12h </li>
+        </ul>
+    <li class="cl_1"> En magasin de producteurs</li>
+        <ul>
+            <li class="cl_2"> Saveur Nature - Boutique de producteurs et Epicerie Bio <br /> Le Bourg, 24450 Saint-Pierre-de-Frugie </li>
+        </ul>
+    <li class="cl_1"> Nos partenaires </li>
+        <ul> 
+            <li class="cl_2"> Grand Hôtel Pélisson - 3 Place Alfred Agard, 24300 Nontron </li>
+            <li class="cl_2"> Boulangerie - Le Relais de Compostelle  - 72 Rue Republique, 24450 La Coquille </li>
+        </ul>
+ </ul>
+<img src="images/carte.svg" style="width: 100%; height:auto; margin-top:-10px;" /> 
+<div class="div_container">
+ <p class="titre_article" id="FormulaireContact">Nous contacter</p>
+</div>
+
+ <div class="ligne_verte"> &nbsp; </div>
+ 
+ <div class="formulaire">
+ <form action="mail.php" method="post">
+    <input type="hidden" name="objet" value="[JardinBuissonnier] Nouveau contact" />
+    <p><label for="id_nom">Nom, Prénom :</label> <input id="id_nom" type="text" name="nom" maxlength="20" required/></p>
+    <p><label for="id_mail">Adresse mail :</label> <input type="text" name="mail" id="id_mail" required /></p>
+    <p><label for="id_numero">Numéro de téléphone :</label> <input id="id_numero" type="text" name="numero" maxlength="20" /></p>
+    <p><label for="id_message">Message :</label> <textarea id="id_message" rows="10" cols="60" name="message" required></textarea></p>
+    
+    
+    <input type="submit" value="Envoyer &#9656;" class="bouton_vert" style="right:100px;"/>
+
+</form>
+</div>
+
+
+ </div>
+            
+            
+        </div>
+        
+    <script type="text/javascript">   
+    console.log('Tut');
+    console.log('page', pageYOffset);
+    window.onscroll = function (e) {
+      
+      var body = document.body,
+        html = document.documentElement;
+
+      var height = Math.max( body.scrollHeight, body.offsetHeight,html.clientHeight, html.scrollHeight, html.offsetHeight );
+      
+      var your_div = document.getElementById('box_menu_lat');
+      
+      console.log('H', height);
+      $('#box_menu_lat').css({
+          'top':  Math.min(Math.max(210 + pageYOffset - 180, 210), height-770)
+      });
+      }
+    </script>
+
+    <div id="box_menu_lat">
+    <div class="menu_lateral">
+    <nav class="menu_lat_nav">
+    
+   
+    <a href="#"> <div class="e_menu_lat"> <img src="images/fleur.svg" class="i_menu_lat"/> Blog </div></a>
+    <a href="jardins.html"> <div class="e_menu_lat"> <img src="images/fleur.svg" class="i_menu_lat"/> Aux jardins</div></a>
+    <a href="index.html"> <div class="e_menu_lat" style="color: #dde9af;;"> <img src="images/fleur_verte.svg" class="i_menu_lat"/> Retour à l'accueil</div></a>
+    
+    </nav>
+    </div>
+    <span class="triangle_lat"> <img src="images/triangle.svg" alt="" style="width:50px; height: auto;"/></span>
+    </div>
+
+         <div style="clear: both;"></div> 
+         
+        <footer>
+            <!-- Pied de page -->
+            <span id="pied" style="width:500px;"> Le Jardin Buissonnier - Lieu dit Le Buisson - Saint-Pardoux-la-rivière - 24470 - <a href="https://www.facebook.com/Le-Jardin-Buissonnier-1734976990112953/" target="_blank"/> <img src="images/icon_facebook.svg" alt="facebook" style="position:relative;top:8px;"/></a> <a href="contact#FormulaireContact"><img src="images/icon_mail.svg" alt="mail" style="position:relative;top:8px;" /> </a> <a href="https://www.google.fr/maps/dir/45.5067032,0.7837966//@45.5072708,0.7839575,17z" target="_blank" /><img src="images/icon_map.svg" alt="map" style="position:relative;top:8px;" /> </a> </span>
+        </footer>
+        <div id="bambou"> <img src="images/bambou.svg" alt="" /> </div>
+    </div>
+    </body>
+</html>
