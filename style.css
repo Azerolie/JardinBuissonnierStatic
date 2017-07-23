@@ -66,7 +66,7 @@ p {
     text-align: justify;
     }
 
-a {
+.a_text {
   text-decoration: none;
   color: #a62016;
   font-weight: bold;
@@ -324,7 +324,7 @@ nav a:hover {
     border: 1px solid #556242;
     border-radius: 5px;
     text-align: center;
-    padding: 3px 8px 0px 8px;
+    padding: 0px 3px 5px 10px;
     color: white;
     text-decoration: none;
     font-family: 'LeagueGothic', sans-serif;

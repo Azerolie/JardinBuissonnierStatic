@@ -6,8 +6,15 @@ $verif="!^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-zA-Z]{2,4}$!";
   
 // On assigne et protège nos variables
 $votremail=$_POST["mail"];
-$from=htmlspecialchars("From: ".$votremail."\r\n");
-$message=stripslashes(htmlspecialchars($_POST["message"]));
+$from='Content-Type: text/plain; charset="utf-8"'." ";
+$from.=htmlspecialchars("From: ".$votremail."\r\n");
+$message="Message envoyé par : " . $_POST["nom"]."\r\n";
+$message.="Numéro de téléphone : " . $_POST["numero"]."\r\n";
+date_default_timezone_set('France/Paris');
+$date = date('m/d/Y h:i:s a', time());
+$message.= "Date : " . $date."\r\n";
+$message.= "Email : " . $votremail."\r\n";
+$message.="Message : " . stripslashes(htmlspecialchars($_POST["message"]));
   
 // On met ici notre e-mail
 $destinataire="emma.prudent@laposte.net";
@@ -17,23 +24,8 @@ puisque dans la partie Html, on l'a mis en caché grâce au type="hidden"<gras><
 $objet=$_POST['objet'];
   
 // C'est bon : on est ok, vérifions si l'e-mail est valide, grâce à notre sympathique REGEX
-if(!preg_match($verif,$votremail))
-{
-        echo "Votre e-mail n'est pas valide";
-}
-  
-// On vérifie s'il y a un message
-elseif (trim($message)=="")
-{
-        echo "Y'en a marre des messages vides !";
-}
-  
-// Si tout est ok, on envoie l'e-mail
-else
-{
-        mail($destinataire,$objet,$message,$from);
-        echo "Message envoyé au webmaster";
-}
+mail($destinataire,$objet,$message,$from);
+header("Location: contact_envoye.html#FormulaireContact" );
   
 ?>
 </head><br />
